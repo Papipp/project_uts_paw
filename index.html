@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matcha Teduh</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .catatan-papip {
+      font-size: 0.9rem;
+      color: #9a9288;
+      border-left: 3px solid #a8c686;
+      padding-left: 12px;
+      margin-top: 20px;
+    }
+    #tabel-papip tfoot tr:hover td {
+      background: rgba(168, 198, 134, 0.14);
+    }
+  </style>
+</head>
+<body>
+
+  <header id="kepala-papip" class="kepala-papip">
+    <h1 id="judul-papip" class="judul-papip">Matcha Teduh</h1>
+    <nav aria-label="Navigasi utama">
+      <ul class="navigasi-papip">
+        <li><a class="tautan-papip" href="#menu-papip">Menu</a></li>
+        <li><a class="tautan-papip" href="#daftar-papip">Daftar harga</a></li>
+        <li><a class="tautan-papip" href="#pesan-papip">Pesan</a></li>
+        <li><a class="tautan-papip" href="https://www.instagram.com/apipakmaluliman/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sampul-papip" class="sampul-papip" aria-labelledby="sapaan-papip">
+      <figure class="gambar-papip">
+        <img
+          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 320'><rect width='800' height='320' fill='%23131812'/><circle cx='650' cy='90' r='130' fill='%23a8c686' opacity='0.12'/><circle cx='140' cy='260' r='90' fill='%23a8c686' opacity='0.07'/><path d='M280 150h240a120 120 0 0 1-240 0z' fill='%2388a86a'/><ellipse cx='400' cy='150' rx='120' ry='16' fill='%23c4dba3'/><ellipse cx='400' cy='152' rx='96' ry='9' fill='%23a8c686'/><rect x='340' y='268' width='120' height='14' rx='7' fill='%2388a86a'/><path d='M350 112c-12-20 12-30 0-52M400 112c-12-20 12-30 0-52M450 112c-12-20 12-30 0-52' fill='none' stroke='%23e8f0dc' stroke-width='6' stroke-linecap='round' opacity='0.55'/></svg>"
+          alt="Ilustrasi semangkuk matcha hijau hangat dengan uap tipis">
+        <figcaption>Semangkuk matcha untuk sore yang pelan.</figcaption>
+      </figure>
+      <div class="sapaan-wadah-papip">
+        <h2 id="sapaan-papip">Kedai kecil, matcha yang serius</h2>
+        <p>Empat menu andalan dari bubuk matcha pilihan, dikocok segar setiap pesanan. Pilih kesukaanmu, lalu hitung pesananmu di bawah.</p>
+        <p style="color:#a8c686; font-style:italic;">Buka setiap hari, pukul 08.00 sampai 21.00.</p>
+      </div>
+    </section>
+
+    <section id="menu-papip" aria-labelledby="judul-menu-papip">
+      <h2 id="judul-menu-papip">Menu hari ini</h2>
+      <div id="kartu-wadah-papip" class="kartu-wadah-papip"></div>
+    </section>
+
+    <section id="daftar-papip" aria-labelledby="judul-daftar-papip">
+      <h2 id="judul-daftar-papip">Daftar harga</h2>
+
+      <h3>Versi daftar</h3>
+      <ul id="daftar-list-papip" class="daftar-list-papip"></ul>
+
+      <h3>Versi tabel</h3>
+      <div class="tabel-bungkus-papip">
+        <table id="tabel-papip" class="tabel-papip">
+          <caption>Harga seluruh menu Matcha Teduh</caption>
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Menu</th>
+              <th scope="col" class="kanan-papip">Harga</th>
+            </tr>
+          </thead>
+          <tbody id="tabel-isi-papip"></tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2">Total seluruh menu</td>
+              <td id="tabel-total-papip" class="kanan-papip"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <p class="catatan-papip">Pesanan di atas Rp 25.000 dapat diskon 5%, di atas Rp 50.000 dapat diskon 10%.</p>
+    </section>
+
+    <section id="pesan-papip" aria-labelledby="judul-pesan-papip">
+      <h2 id="judul-pesan-papip">Pesan sekarang</h2>
+      <form id="formulir-papip" class="formulir-papip" novalidate>
+        <fieldset>
+          <legend>Data pemesan</legend>
+
+          <div class="baris-papip">
+            <label for="pemesan-papip">Pemesan</label>
+            <input type="text" id="pemesan-papip" name="pemesan" required minlength="3" maxlength="40"
+                   pattern="[A-Za-z .']{3,40}" placeholder="Contoh: Papip Ganteng"
+                   title="Gunakan huruf saja, minimal 3 karakter">
+          </div>
+
+          <div class="baris-papip">
+            <label for="surel-papip">Email</label>
+            <input type="email" id="surel-papip" name="surel" required placeholder="papip@gmail.com">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Pesanan</legend>
+
+          <div class="baris-papip">
+            <label for="pilihan-papip">Menu</label>
+            <select id="pilihan-papip" name="pilihan" required>
+              <option value="">Pilih menu</option>
+            </select>
+          </div>
+
+          <div class="baris-papip">
+            <label for="jumlah-papip">Jumlah</label>
+            <input type="number" id="jumlah-papip" name="jumlah" required min="1" max="20" step="1" value="1">
+          </div>
+        </fieldset>
+
+        <button type="button" id="tombol-papip" class="tombol-papip">Hitung dan pesan</button>
+
+        <p id="galat-papip" class="galat-papip" role="alert"></p>
+        <output id="hasil-papip" class="hasil-papip" for="pilihan-papip jumlah-papip"></output>
+        <p id="status-papip" class="status-papip" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="kaki-papip">
+    <p>Matcha Teduh, Yogyakarta. Terima kasih sudah mampir.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
